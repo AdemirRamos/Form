@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Não sei se "px", após os números (acima), é opcional ou não.*/
+
+:root {
+    --cor_roxo_escuro: #380861;
+    --cor_branca: #f0f8ff;
+    --cor_roxo_claro: #59429b;
+    --cor_branca_2: #e0e0f8;
+    --cor_roxo_clearer: #ccbbff; 
+}
+
+#título {
+    font-family: sans-serif;
+    color: var(--cor_roxo_escuro);
+    margin-left: 7%;
+}
+
+#subtítulo {
+    font-family: sans-serif;
+    color: var(--cor_roxo_escuro);
+    margin-left: 10%;
+}
+
+fieldset {
+    /*É possível selecionar uma ou mais "tags" inteiras no CSS sem usar "class" ou "id".*/
+    /*O mais comum é ver isso com o "body". Até então, eu não tinha visto isso com outras "tags".*/
+    border: 0;
+}
+
+body {
+    background-color: #f0f8ff;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: var(--cor_roxo_claro);
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+    /*Conferir essa propriedade.*/
+}
+
+input, select, textarea, button {
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: var(--cor_roxo_claro);
+    display: block;
+}
+
+fieldset.grupo .campo{
+    /*Essa configuração de seletor eu não tinha visto ainda.*/
+    float: left;
+    /*Também não havia visto essa propriedade ainda.*/
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    /*Mais uma configuração (de seletor) inédita para mim.*/
+    padding: 0.2em;
+    border: 1px solid var(--cor_roxo_claro);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: var(--cor_branca_2);
+}
+
+.botão {
+    font-size: 1.2em;
+    background: var(--cor_roxo_claro);
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    /*Conferir esse comando.*/
+    top: 90%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    /*Não sei o que é esse comando acima.*/
+}
+
+.botão:hover {
+    background: var(--cor_roxo_clearer);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+#check {
+    display: inline-block;
+}
